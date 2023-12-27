@@ -73,6 +73,42 @@ def maps(a):
     return [2 * x for x in a]
 print(maps(a))
 
+'''Ваша задача - создать функцию, которая выполняет четыре основных математических операции.
+
+Функция должна принимать три аргумента - operation(строка /символ), value1(число),
+ value2(число).
+Функция должна возвращать результат чисел после применения выбранной операции.
+
+Примеры(Operator, value1, value2) --> вывод
+('+', 4, 7) --> 11
+('-', 15, 18) --> -3
+('*', 5, 5) --> 25
+('/', 49, 7) --> 7
+'''
+
+def basic_op(operator, value1, value2):
+    if operator == '+':
+        return value1 + value2
+    elif operator == '-':
+        return value1- value2
+    elif operator == '*':
+        return value1 * value2
+    elif operator == '/':
+        return value1/value2
+    else:
+        return 'неизвестная операция'
+
+'''Это ката о умножении данного числа на восемь, если оно четное,
+ и на девять в противном случае.'''
+
+def simple_multiplication(number) :
+    return number * 8 if number % 2 == 0 else number * 9
+
+
+
+
+
+
 
 
 
