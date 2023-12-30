@@ -105,10 +105,47 @@ def simple_multiplication(number) :
     return number * 8 if number % 2 == 0 else number * 9
 
 
+'''Создайте функцию, которая принимает строку и одиночный символ и возвращает
+ целое число от количества вхождений, второй аргумент которого находится в первом.
+
+Если не удается найти ни одного вхождения, должно быть возвращено значение 0.'''
+
+def str_count(strng, letter):
+    return (strng.count(letter))
 
 
+def str_count(strng, letter):
+    counter = 0
+
+    for chr in strng:
+        if chr == letter:
+            counter += 1
+
+    return counter
+
+'''Создайте функцию, которая выдает персонализированное приветствие.
+ Эта функция принимает два параметра: name и owner.
+
+Используйте условные обозначения, чтобы вернуть правильное сообщение:'''
+def greet(name, owner):
+
+    if name == owner:
+        return 'Hello, boss'
+    else:
+        return 'Hello,guest'
+
+'''Ваша задача - создать две функции (max и min, или maximum и minimum и т.д.,
+ В зависимости от языка), которые получают список целых чисел в качестве 
+ входных данных и возвращают наибольшее и наименьшее число 
+ в этом списке соответственно.'''
 
 
+def minimum(arr):
+    return min(arr)
+
+
+def maximum(arr):
+    return max(arr)
 
 
 
