@@ -147,16 +147,44 @@ def minimum(arr):
 def maximum(arr):
     return max(arr)
 
+'''Учитывая непустой массив целых чисел, верните результат умножения значений по порядку.
+ Пример: [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24'''
+
+def grow(arr):
+    product = 1
+    for i in arr:
+        product *= i
+    return product
 
 
+'''Бобу нужен быстрый способ вычислить объем кубоида с тремя значениями:
+ length, width и height кубоида.
+ Напишите функцию, которая поможет Бобу с этим вычислением.'''
 
 
+def get_volume_of_cuboid(length, width, height):
+    s = length * width * height
+    return s
 
+'''Напишите функцию bmi, которая вычисляет индекс массы тела (bmi = вес / рост2).
 
+если ИМТ <= 18,5, возвращаем "Недостаточный вес"
 
+если ИМТ <= 25,0 возвращает значение "Нормальный"
 
+если ИМТ <= 30,0, возвращается "Избыточный вес"
 
-
+если ИМТ > 30, возвращается "Ожирение"'''
+def bmi(weight, height):
+    bmi = weight/height**2
+    if bmi <= 18.5:
+        return 'Underweight'
+    elif bmi <=25.0:
+        return 'Normal'
+    elif bmi <=30.0:
+        return 'Overweight'
+    elif bmi > 30:
+        return 'Obese'
 
 
 
