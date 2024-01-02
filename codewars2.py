@@ -9,7 +9,8 @@ def check(seq, elem):
      return elem in seq
 
 
-'''Завершите функцию square sum так, чтобы она возводила в квадрат каждое переданное в нее число, а затем суммировала результаты вместе.
+'''Завершите функцию square sum так, чтобы она возводила в квадрат каждое переданное 
+в нее число, а затем суммировала результаты вместе.
 
 Например, для [1, 2, 2] оно должно возвращать результат 9, потому что 
 1
@@ -90,4 +91,59 @@ def litres(time):
 
 
 
+'''У меня есть кошка и собака.
 
+Я получил их одновременно с котенком / щенком. Это было humanYears много лет назад.
+
+Теперь возвращает их соответствующий возраст как [humanYears,catYears,dogYears]
+
+Примечания:
+
+Человеческих лет >= 1
+Человеческие годы - это только целые числа
+Кошачьи годы
+15 cat years за первый год
++9 второй год обучения в cat years
++4 кошачьи годы за каждый последующий год
+Собачьи годы'''
+def human_years_cat_years_dog_years(human_years):
+    catYears = 0
+    dogYears = 0
+    if human_years == 1:
+        catYears += 15
+        dogYears += 15
+        return [human_years, catYears, dogYears]
+    elif human_years == 2:
+        catYears += 24
+        dogYears += 24
+        return [human_years, catYears, dogYears]
+    elif human_years > 2:
+        catYears += 24
+        dogYears += 24
+        years = human_years - 2
+        catYears += years*4
+        dogYears += years*5
+        return [human_years, catYears, dogYears]
+    return [0,0,0]
+'''Нам нужна функция, которая может преобразовывать число (integer) в строку.
+
+Какие способы достижения этого вы знаете?'''
+def number_to_string(num):
+    return str(num)
+
+"""В этом небольшом задании вам дается строка чисел, разделенных пробелом,
+ и вы должны вернуть наибольшее и наименьшее число.
+
+Примеры
+high_and_low("1 2 3 4 5")  # return "5 1"
+high_and_low("1 2 -3 4 5") # return "5 -3"
+high_and_low("1 9 3 4 -5") # return "9 -5"
+Примечания
+Все числа действительны Int32, нет необходимости их проверять.
+Во входной строке всегда будет хотя бы одно число.
+Выходная строка должна состоять из двух чисел, разделенных одним пробелом,
+ и первым должно быть наибольшее число."""
+
+
+def high_and_low(numbers):
+    return max(numbers)," ", min(numbers)
