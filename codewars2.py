@@ -143,7 +143,8 @@ high_and_low("1 9 3 4 -5") # return "9 -5"
 Во входной строке всегда будет хотя бы одно число.
 Выходная строка должна состоять из двух чисел, разделенных одним пробелом,
  и первым должно быть наибольшее число."""
-
-
 def high_and_low(numbers):
-    return max(numbers)," ", min(numbers)
+    numbers = [int(x) for x in numbers.split(" ")]
+    return str(max(numbers)) + " " + str(min(numbers))
+
+
