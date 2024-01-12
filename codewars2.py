@@ -3,6 +3,9 @@
  это проверить, содержит ли предоставленный массив значение.
 Массив может содержать числа или строки. X может быть любым из них.
 Верните, true если массив содержит значение, false если нет.'''
+import re
+
+
 def check(seq, elem):
      return elem in seq
 
@@ -236,6 +239,29 @@ def is_even(n):
 '''
 def sum_two_smallest_numbers(numbers):
     return sum(sorted(numbers)[:2])
+def sum_two_smallest_numbers(num_list):
+    num_list.sort()
+    return num_list[0] + num_list[1]
+'''Создайте метод, чтобы увидеть, ВСЕ ли строки ЗАГЛАВНЫЕ.'''
+def is_uppercase(inp):
+    return inp == inp.upper()
+
+
+'''Создайте функцию, которая возвращает массив целых чисел от n до 1, где n>0.'''
+def reverse_seq(n):
+    return list(range(n, 0, -1))
+'''В этом простом задании вам дается число, и вы должны сделать его отрицательным.
+ Но, возможно, число уже отрицательное?'''
+def make_negative( number ):
+    if number > 0:
+        return -number
+    if number <= 0:
+        return number
+def make_negative( number ):
+    return -abs(number)
+
+
+
 
 
 
