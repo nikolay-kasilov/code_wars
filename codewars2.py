@@ -259,9 +259,36 @@ def make_negative( number ):
         return number
 def make_negative( number ):
     return -abs(number)
+'''Напишите программу, в которой Алекс может ввести (n), сколько раз вращается обруч,
+ и она вернет ему ободряющее сообщение :)'''
+def hoop_count(n):
+    if n>=10:
+        return 'Great, now move on to tricks'
+    if n< 10:
+        return "Keep at it until you get it"
+'''Учитывая два числа и арифметический оператор (его название в виде строки), верните результат двух чисел, 
+над которыми используется этот оператор.
+a и b оба будут целыми положительными числами, и a всегда будет первым числом в операции, и b всегда вторым.
+Четыре оператора - "сложение", "вычитание", "деление", "умножение".
+Несколько примеров: (Input1, Input2, Input3 --> Вывод)  5, 2, "add"      --> 7'''
+def arithmetic(a, b, operator):
+    if operator == 'add':
+        return a +b
+    if operator == 'subtract':
+        return a -b
+    if operator == 'multiply':
+        return a*b
+    if operator == 'divide':
+        return a/b
 
-
-
-
-
-
+def arithmetic(a, b, operator):
+    return {
+        'add': a + b,
+        'subtract': a - b,
+        'multiply': a * b,
+        'divide': a / b,
+    }[operator]
+'''Завершите работу функции, которая принимает строковый параметр и меняет местами каждое слово в строке.
+ Все пробелы в строке должны быть сохранены.    "This is an example!" ==> "sihT si na !elpmaxe"'''
+def reverse_words(str):
+    return ' '.join(s[::-1] for s in str.split(' '))
