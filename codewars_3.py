@@ -23,6 +23,7 @@ def between(a,b):
     for i in range(a, b + 1):
         arr.append(i)
     return arr
+<<<<<<< HEAD
 '''Тролли атакуют ваш раздел комментариев!
 Распространенный способ справиться с этой ситуацией - убрать все гласные из комментариев троллей, нейтрализуя угрозу.
 Ваша задача - написать функцию, которая принимает строку и возвращает новую строку с удаленными всеми гласными.
@@ -45,3 +46,21 @@ def disemvowel(s):
 def string_to_number(s):
     result = int(s)
     return  result
+=======
+'''Камень ножницы Бумага
+Давайте играть! Вы должны вернуть, какой игрок выиграл! В случае ничьей верните Draw!.
+Примеры (Ввод1, Ввод2 --> Вывод):
+«ножницы», «бумага» --> «Игрок 1 выиграл!»
+«ножницы», «камень» --> «Игрок 2 выиграл!»
+«бумага», «бумага» --> «Рисуй!»
+ "scissors", "paper" --> "Player 1 won!"
+"scissors", "rock" --> "Player 2 won!"
+"paper", "paper" --> "Draw!"'''
+def rps(p1, p2):
+    if p1=="scissors" and p2== "paper":
+        return "Player 1 won!"
+    if p1=="scissors" and p2 =="paper":
+        return "Player 2 won!"
+    elif p1 == "paper"and p2 =="paper":
+        return "Draw!"
+>>>>>>> dde19340e4bfd013528acc9bf53d0ea2d3dc9314
